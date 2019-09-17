@@ -7,7 +7,7 @@
     "test": "jest",
     "lint": "eslint ."
   },
-  "author": "",
+  "author": "Nick O'Leary <noleary82@gmail.com>",
   "contributors": [
     "Christopher Andrews <candrews@middlebury.edu>",
     "Michael Linderman <mlinderman@middlebury.edu>"
