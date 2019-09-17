@@ -49,7 +49,6 @@ const createSlider = function createSlider(color, initialValue, callback) {
 
   // return the slider
   return slider;
-
 };
 
 
@@ -67,7 +66,7 @@ whenever the value of the color changes.
 */
 const createColorPicker = function createColorPicker(initialValue, callback) { // eslint-disable-line no-unused-vars, max-len
   // create a div to hold the picker
-  const picker = document.createElement("div");
+  const picker = document.createElement('div');
   picker.className = 'color-picker';
 
   // create a div with the class 'color-swatch' to provide the colored rectangle
@@ -87,16 +86,16 @@ const createColorPicker = function createColorPicker(initialValue, callback) { /
   // - set the background color of the swatch
   // - call the callback with the current color
 
-  const update = function(newColor) {
+  const update = function (newColor) {
     // old update function
-    currentColor = { ...currentColor, ...newColor }
+    currentColor = { ...currentColor, ...newColor };
     const { red, green, blue } = currentColor;
     colorBox.style.background = `rgb(${red}, ${green}, ${blue})`;
     callback(currentColor);
   };
   // add sliders for each color channel
 
-  Object.keys(currentColor).forEach((color) =>{
+  Object.keys(currentColor).forEach((color) => {
     // initialize slider in here
     const initSlider = createSlider(color, currentColor[color], update);
     picker.appendChild(initSlider);
@@ -108,7 +107,6 @@ const createColorPicker = function createColorPicker(initialValue, callback) { /
 
   // return the picker
   return picker;
-
 };
 
 try {
